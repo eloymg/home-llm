@@ -150,7 +150,7 @@ PROMPT_TEMPLATE_DESCRIPTIONS = {
         "user": { "prefix": "<|start|>user<|message|>", "suffix": "<|end|>" },
         "assistant": { "prefix": "<|start|>assistant<|channel|>final<|message|>", "suffix": "<|end|>" },
         "tool": { "prefix": "<|start|>tool", "suffix": "<|end|>" },
-        "chain_of_thought": { "prefix": "<|start|>assistant<|channel|>analysis<|message|>", "suffix": "<|end|>"},
+        "chain_of_thought": { "prefix": "|channel|analysis<|message|", "suffix": "<|end|>"},
         "generation_prompt": "<|start|>assistant"
     },
     PROMPT_TEMPLATE_CHATML: {
