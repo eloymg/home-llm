@@ -146,11 +146,11 @@ PROMPT_TEMPLATE_ZEPHYR3 = "zephyr3"
 DEFAULT_PROMPT_TEMPLATE = PROMPT_TEMPLATE_CHATML
 PROMPT_TEMPLATE_DESCRIPTIONS = {
     PROMPT_TEMPLATE_GPT_OSS: {
-        "system": { "prefix": "<|start|>system\n", "suffix": "<|end|>" },
-        "user": { "prefix": "<|start|>user\n", "suffix": "<|end|>" },
+        "system": { "prefix": "<|start|>system<|message|>\n", "suffix": "<|end|>" },
+        "user": { "prefix": "<|start|>user<|message|>\n", "suffix": "<|end|>" },
         "assistant": { "prefix": "<|start|>assistant\n", "suffix": "<|end|>" },
         "tool": { "prefix": "<|start|>tool", "suffix": "<|end|>" },
-        "chain_of_thought": { "prefix": "<think>", "suffix": "</think>"},
+        "chain_of_thought": { "prefix": "<|start|>assistant<|channel|>analysis<|message|>", "suffix": "<|end|>"},
         "generation_prompt": "<|start|>assistant"
     },
     PROMPT_TEMPLATE_CHATML: {
