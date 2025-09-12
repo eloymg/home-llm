@@ -132,6 +132,7 @@ CONF_EXTRA_ATTRIBUTES_TO_EXPOSE = "extra_attributes_to_expose"
 DEFAULT_EXTRA_ATTRIBUTES_TO_EXPOSE = ["rgb_color", "brightness", "temperature", "humidity", "fan_mode", "media_title", "volume_level", "item", "wind_speed"]
 ALLOWED_SERVICE_CALL_ARGUMENTS = ["rgb_color", "brightness", "temperature", "humidity", "fan_mode", "hvac_mode", "preset_mode", "item", "duration" ]
 CONF_PROMPT_TEMPLATE = "prompt_template"
+PROMPT_TEMPLATE_GPT_OSS_V2 = "gpt-oss-v2"
 PROMPT_TEMPLATE_GPT_OSS = "gpt-oss"
 PROMPT_TEMPLATE_CHATML = "chatml"
 PROMPT_TEMPLATE_COMMAND_R = "command-r"
@@ -145,6 +146,14 @@ PROMPT_TEMPLATE_ZEPHYR2 = "zephyr2"
 PROMPT_TEMPLATE_ZEPHYR3 = "zephyr3"
 DEFAULT_PROMPT_TEMPLATE = PROMPT_TEMPLATE_CHATML
 PROMPT_TEMPLATE_DESCRIPTIONS = {
+    PROMPT_TEMPLATE_GPT_OSS_V2: {
+        "system": { "prefix": "<|start|system<|message|", "suffix": "<|end|>" },
+        "user": { "prefix": "<|start|user<|message|", "suffix": "<|end|>" },
+        "assistant": { "prefix": "<|start|assistant<|channel|final<|message|", "suffix": "<|end|>" },
+        "tool": { "prefix": "<|start|tool", "suffix": "<|end|>" },
+        "chain_of_thought": { "prefix": "<|start|assistant<|channel|analysis<|message|", "suffix": "<|end|>"},
+        "generation_prompt": "<|start|assistant"
+    },
     PROMPT_TEMPLATE_GPT_OSS: {
         "system": { "prefix": "<|start|>system<|message|>", "suffix": "<|end|>" },
         "user": { "prefix": "<|start|>user<|message|>", "suffix": "<|end|>" },
