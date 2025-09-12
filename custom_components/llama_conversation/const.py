@@ -148,9 +148,9 @@ PROMPT_TEMPLATE_DESCRIPTIONS = {
     PROMPT_TEMPLATE_GPT_OSS: {
         "system": { "prefix": "<|start|>system<|message|>", "suffix": "<|end|>" },
         "user": { "prefix": "<|start|>user<|message|>", "suffix": "<|end|>" },
-        "assistant": { "prefix": "assistant<|channel|>final<|message|>", "suffix": "" },
+        "assistant": { "prefix": "<|start|>assistant<|channel|>final<|message|>", "suffix": "" },
         "tool": { "prefix": "<|start|>tool", "suffix": "<|end|>" },
-        "chain_of_thought": { "prefix": " <|channel|>analysis<|message|>", "suffix": "<|end|>"},
+        "chain_of_thought": { "prefix": "<|channel|>analysis<|message|>", "suffix": "<|end|>"},
         "generation_prompt": "<|start|>assistant"
     },
     PROMPT_TEMPLATE_CHATML: {
