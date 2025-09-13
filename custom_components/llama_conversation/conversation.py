@@ -413,7 +413,7 @@ class LocalLLMAgent(ConversationEntity, AbstractConversationAgent):
             )
 
         # remove end of text token if it was returned
-        #response = response.replace(template_desc["assistant"]["suffix"], "")
+        response = response.replace(template_desc["assitant"]["prefix"], "")
 
         # remove think blocks
         response = re.sub(rf"^.*?{template_desc["chain_of_thought"]["suffix"]}", "", response, flags=re.DOTALL)
